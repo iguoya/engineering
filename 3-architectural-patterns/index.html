@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>结构性模式 |  设计模式</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content=" 李建忠---可复用的软件设计">
+    <link rel="preload" href="/design-patterns/assets/css/0.styles.ccbe7424.css" as="style"><link rel="preload" href="/design-patterns/assets/js/app.3c2122e4.js" as="script"><link rel="preload" href="/design-patterns/assets/js/2.5c19d7f6.js" as="script"><link rel="preload" href="/design-patterns/assets/js/15.c93a8fed.js" as="script"><link rel="prefetch" href="/design-patterns/assets/js/10.f2270f53.js"><link rel="prefetch" href="/design-patterns/assets/js/11.34f2522a.js"><link rel="prefetch" href="/design-patterns/assets/js/12.89ecd73c.js"><link rel="prefetch" href="/design-patterns/assets/js/13.9297cc82.js"><link rel="prefetch" href="/design-patterns/assets/js/14.63b07680.js"><link rel="prefetch" href="/design-patterns/assets/js/16.8657b6f0.js"><link rel="prefetch" href="/design-patterns/assets/js/17.e1316d3a.js"><link rel="prefetch" href="/design-patterns/assets/js/18.95bac3f8.js"><link rel="prefetch" href="/design-patterns/assets/js/19.bbf8f541.js"><link rel="prefetch" href="/design-patterns/assets/js/20.a94c428a.js"><link rel="prefetch" href="/design-patterns/assets/js/3.6dca2ed9.js"><link rel="prefetch" href="/design-patterns/assets/js/4.25df9a0a.js"><link rel="prefetch" href="/design-patterns/assets/js/5.274adcae.js"><link rel="prefetch" href="/design-patterns/assets/js/6.96f9b8c9.js"><link rel="prefetch" href="/design-patterns/assets/js/7.b37556e5.js"><link rel="prefetch" href="/design-patterns/assets/js/8.cf52c015.js"><link rel="prefetch" href="/design-patterns/assets/js/9.4ed1167f.js">
+    <link rel="stylesheet" href="/design-patterns/assets/css/0.styles.ccbe7424.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/design-patterns/" class="home-link router-link-active"><!----> <span class="site-name"> 设计模式</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/design-patterns/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/design-patterns/H5/" class="nav-link">
+  H5
+</a></div><div class="nav-item"><a href="/design-patterns/Standard/" class="nav-link">
+  规范
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/design-patterns/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/design-patterns/H5/" class="nav-link">
+  H5
+</a></div><div class="nav-item"><a href="/design-patterns/Standard/" class="nav-link">
+  规范
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Design Principles</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Creational Patterns</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Architectural Patterns</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/design-patterns/3-architectural-patterns/" aria-current="page" class="active sidebar-link">结构性模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/design-patterns/3-architectural-patterns/#分类" class="sidebar-link">分类</a></li></ul></li><li><a href="/design-patterns/3-architectural-patterns/1.adapter.html" class="sidebar-link">适配器模式</a></li><li><a href="/design-patterns/3-architectural-patterns/2.bridge.html" class="sidebar-link">桥接模式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Behavior Patterns</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>H组件协作</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="结构性模式"><a href="#结构性模式" class="header-anchor">#</a> 结构性模式</h1> <p>结构型模式(Structural Pattern)描述<strong>如何将类或者对象结合在一起形成更大的结构，就像搭积木，可以通过 简单积木的组合形成复杂的、功能更为强大的结构。</strong></p> <p>结构型模式可以分为<strong>类结构型模式和对象结构型模式</strong>：</p> <ol><li><p>类结构型模式关心类的组合，由多个类可以组合成一个更大的系统，在<strong>类结构型模式中一般只存在继承关系和实现关系</strong>。</p></li> <li><p>对象结构型模式<strong>关心类与对象的组合，通过关联关系使得在一个类中定义另一个类的实例对象，然后通过该对象调用其方法。</strong> 根据“合成复用原则”，<strong>在系统中尽量使用关联关系来替代继承关系</strong>，因此大部分结构型模式都是对象结构型模式。</p></li></ol> <h2 id="分类"><a href="#分类" class="header-anchor">#</a> 分类</h2> <table><thead><tr><th>模式</th> <th>name</th> <th>重要性</th></tr></thead> <tbody><tr><td>外观模式</td> <td>Facade</td> <td>5</td></tr> <tr><td>适配器模式</td> <td>Adapter</td> <td>4</td></tr> <tr><td>代理模式</td> <td>Proxy</td> <td>4</td></tr> <tr><td>组合模式</td> <td>Composite</td> <td>4</td></tr> <tr><td>桥连模式</td> <td>Bridge</td> <td>3</td></tr> <tr><td>装饰模式</td> <td>Decorator</td> <td>3</td></tr> <tr><td>享元模式</td> <td>FlyWeight</td> <td>1</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/design-patterns/2-creational-patterns/4.singleton.html" class="prev">
+        单例模式
+      </a></span> <span class="next"><a href="/design-patterns/3-architectural-patterns/1.adapter.html">
+        适配器模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/design-patterns/assets/js/app.3c2122e4.js" defer></script><script src="/design-patterns/assets/js/2.5c19d7f6.js" defer></script><script src="/design-patterns/assets/js/15.c93a8fed.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>单例模式 |  设计模式</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content=" 李建忠---可复用的软件设计">
+    <link rel="preload" href="/design-patterns/assets/css/0.styles.ccbe7424.css" as="style"><link rel="preload" href="/design-patterns/assets/js/app.3c2122e4.js" as="script"><link rel="preload" href="/design-patterns/assets/js/2.5c19d7f6.js" as="script"><link rel="preload" href="/design-patterns/assets/js/11.34f2522a.js" as="script"><link rel="prefetch" href="/design-patterns/assets/js/10.f2270f53.js"><link rel="prefetch" href="/design-patterns/assets/js/12.89ecd73c.js"><link rel="prefetch" href="/design-patterns/assets/js/13.9297cc82.js"><link rel="prefetch" href="/design-patterns/assets/js/14.63b07680.js"><link rel="prefetch" href="/design-patterns/assets/js/15.c93a8fed.js"><link rel="prefetch" href="/design-patterns/assets/js/16.8657b6f0.js"><link rel="prefetch" href="/design-patterns/assets/js/17.e1316d3a.js"><link rel="prefetch" href="/design-patterns/assets/js/18.95bac3f8.js"><link rel="prefetch" href="/design-patterns/assets/js/19.bbf8f541.js"><link rel="prefetch" href="/design-patterns/assets/js/20.a94c428a.js"><link rel="prefetch" href="/design-patterns/assets/js/3.6dca2ed9.js"><link rel="prefetch" href="/design-patterns/assets/js/4.25df9a0a.js"><link rel="prefetch" href="/design-patterns/assets/js/5.274adcae.js"><link rel="prefetch" href="/design-patterns/assets/js/6.96f9b8c9.js"><link rel="prefetch" href="/design-patterns/assets/js/7.b37556e5.js"><link rel="prefetch" href="/design-patterns/assets/js/8.cf52c015.js"><link rel="prefetch" href="/design-patterns/assets/js/9.4ed1167f.js">
+    <link rel="stylesheet" href="/design-patterns/assets/css/0.styles.ccbe7424.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/design-patterns/" class="home-link router-link-active"><!----> <span class="site-name"> 设计模式</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/design-patterns/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/design-patterns/H5/" class="nav-link">
+  H5
+</a></div><div class="nav-item"><a href="/design-patterns/Standard/" class="nav-link">
+  规范
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/design-patterns/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/design-patterns/H5/" class="nav-link">
+  H5
+</a></div><div class="nav-item"><a href="/design-patterns/Standard/" class="nav-link">
+  规范
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Design Principles</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Creational Patterns</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/design-patterns/2-creational-patterns/" aria-current="page" class="sidebar-link">创建者模式</a></li><li><a href="/design-patterns/2-creational-patterns/1.SimpleFactory.html" class="sidebar-link">简单工厂模式</a></li><li><a href="/design-patterns/2-creational-patterns/2.FactoryMethod.html" class="sidebar-link">工厂方法模式</a></li><li><a href="/design-patterns/2-creational-patterns/3.AbstractFactory.html" class="sidebar-link">抽象工厂模式</a></li><li><a href="/design-patterns/2-creational-patterns/4.singleton.html" aria-current="page" class="active sidebar-link">单例模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/design-patterns/2-creational-patterns/4.singleton.html#动机" class="sidebar-link">动机</a></li><li class="sidebar-sub-header"><a href="/design-patterns/2-creational-patterns/4.singleton.html#定义" class="sidebar-link">定义</a></li><li class="sidebar-sub-header"><a href="/design-patterns/2-creational-patterns/4.singleton.html#代码" class="sidebar-link">代码</a></li><li class="sidebar-sub-header"><a href="/design-patterns/2-creational-patterns/4.singleton.html#分析" class="sidebar-link">分析</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Architectural Patterns</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Behavior Patterns</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>H组件协作</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="单例模式"><a href="#单例模式" class="header-anchor">#</a> 单例模式</h1> <h2 id="动机"><a href="#动机" class="header-anchor">#</a> 动机</h2> <blockquote><p>对于系统中的某些类来说，只有一个实例很重要，例如，一个系统中可以存在多个打印任务，但是只能有一个正在工作的任务；一个系统只能有一个窗口管理器或文件系统；一个系统只能有一个计时工具或ID（序号）生成器。</p> <p>如何保证一个类只有一个实例并且这个实例易于被访问呢？定义一个全局变量可以确保对象随时都可以被访问，但不能防止我们实例化多个对象。</p> <p>一个更好的解决办法是让类自身负责保存它的唯一实例。这个类可以保证没有其他实例被创建，并且它可以提供一个访问该实例的方法。这就是单例模式的模式动机。</p></blockquote> <h2 id="定义"><a href="#定义" class="header-anchor">#</a> 定义</h2> <ol><li><p>某个类只能有一个实例；</p></li> <li><p>它必须自行创建这个实例；</p></li> <li><p>它必须自行向整个系统提供这个实例。</p> <p>单例模式是一种对象创建型模式。</p></li></ol> <h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Singleton.h&quot;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	Singleton <span class="token operator">*</span> sg <span class="token operator">=</span> <span class="token class-name">Singleton</span><span class="token operator">::</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	sg<span class="token operator">-&gt;</span><span class="token function">singletonOperation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-cpp extra-class"><pre class="language-cpp"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Singleton.h&quot;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+Singleton <span class="token operator">*</span> Singleton<span class="token operator">::</span>instance <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span><span class="token comment">//!!!!!!!!</span>
+
+<span class="token class-name">Singleton</span><span class="token operator">::</span><span class="token function">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Singleton</span><span class="token operator">::</span><span class="token operator">~</span><span class="token function">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">delete</span> instance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Singleton<span class="token operator">*</span> <span class="token class-name">Singleton</span><span class="token operator">::</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">return</span>  instance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">void</span> <span class="token class-name">Singleton</span><span class="token operator">::</span><span class="token function">singletonOperation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;singletonOperation&quot;</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="分析"><a href="#分析" class="header-anchor">#</a> 分析</h2> <p>单例类拥有私有构造函数,确保无法通过new直接实例化
+存在工厂方法符合检验实例是否已经存在并实例化自己,存储在静态成员变量中</p> <ol><li>构造函数私有</li> <li>存在一个私有的静态成员变量作为标记</li> <li>存在一个公有的静态成员方法作为对象生成</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/design-patterns/2-creational-patterns/3.AbstractFactory.html" class="prev">
+        抽象工厂模式
+      </a></span> <span class="next"><a href="/design-patterns/3-architectural-patterns/">
+        结构性模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/design-patterns/assets/js/app.3c2122e4.js" defer></script><script src="/design-patterns/assets/js/2.5c19d7f6.js" defer></script><script src="/design-patterns/assets/js/11.34f2522a.js" defer></script>
+  </body>
+</html>

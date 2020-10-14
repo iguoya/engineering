@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>适配器模式 |  设计模式</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content=" 李建忠---可复用的软件设计">
+    <link rel="preload" href="/design-patterns/assets/css/0.styles.ccbe7424.css" as="style"><link rel="preload" href="/design-patterns/assets/js/app.3c2122e4.js" as="script"><link rel="preload" href="/design-patterns/assets/js/2.5c19d7f6.js" as="script"><link rel="preload" href="/design-patterns/assets/js/13.9297cc82.js" as="script"><link rel="prefetch" href="/design-patterns/assets/js/10.f2270f53.js"><link rel="prefetch" href="/design-patterns/assets/js/11.34f2522a.js"><link rel="prefetch" href="/design-patterns/assets/js/12.89ecd73c.js"><link rel="prefetch" href="/design-patterns/assets/js/14.63b07680.js"><link rel="prefetch" href="/design-patterns/assets/js/15.c93a8fed.js"><link rel="prefetch" href="/design-patterns/assets/js/16.8657b6f0.js"><link rel="prefetch" href="/design-patterns/assets/js/17.e1316d3a.js"><link rel="prefetch" href="/design-patterns/assets/js/18.95bac3f8.js"><link rel="prefetch" href="/design-patterns/assets/js/19.bbf8f541.js"><link rel="prefetch" href="/design-patterns/assets/js/20.a94c428a.js"><link rel="prefetch" href="/design-patterns/assets/js/3.6dca2ed9.js"><link rel="prefetch" href="/design-patterns/assets/js/4.25df9a0a.js"><link rel="prefetch" href="/design-patterns/assets/js/5.274adcae.js"><link rel="prefetch" href="/design-patterns/assets/js/6.96f9b8c9.js"><link rel="prefetch" href="/design-patterns/assets/js/7.b37556e5.js"><link rel="prefetch" href="/design-patterns/assets/js/8.cf52c015.js"><link rel="prefetch" href="/design-patterns/assets/js/9.4ed1167f.js">
+    <link rel="stylesheet" href="/design-patterns/assets/css/0.styles.ccbe7424.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/design-patterns/" class="home-link router-link-active"><!----> <span class="site-name"> 设计模式</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/design-patterns/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/design-patterns/H5/" class="nav-link">
+  H5
+</a></div><div class="nav-item"><a href="/design-patterns/Standard/" class="nav-link">
+  规范
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/design-patterns/home/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/design-patterns/H5/" class="nav-link">
+  H5
+</a></div><div class="nav-item"><a href="/design-patterns/Standard/" class="nav-link">
+  规范
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Design Principles</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Creational Patterns</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Architectural Patterns</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/design-patterns/3-architectural-patterns/" aria-current="page" class="sidebar-link">结构性模式</a></li><li><a href="/design-patterns/3-architectural-patterns/1.adapter.html" aria-current="page" class="active sidebar-link">适配器模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/design-patterns/3-architectural-patterns/1.adapter.html#动机" class="sidebar-link">动机</a></li><li class="sidebar-sub-header"><a href="/design-patterns/3-architectural-patterns/1.adapter.html#定义" class="sidebar-link">定义</a></li><li class="sidebar-sub-header"><a href="/design-patterns/3-architectural-patterns/1.adapter.html#结构" class="sidebar-link">结构</a></li></ul></li><li><a href="/design-patterns/3-architectural-patterns/2.bridge.html" class="sidebar-link">桥接模式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Behavior Patterns</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>H组件协作</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="适配器模式"><a href="#适配器模式" class="header-anchor">#</a> 适配器模式</h1> <h2 id="动机"><a href="#动机" class="header-anchor">#</a> 动机</h2> <blockquote><ul><li>在软件开发中采用类似于电源适配器的设计和编码技巧被称为适配器模式。</li> <li>通常情况下，客户端可以通过目标类的接口访问它所提供的服务。有时，现有的类可以满足客户类的功能需要，但是它所提供的接口不一定是客户类所期望的，这可能是因为现有类中方法名与目标类中定义的方法名不一致等原因所导致的。</li> <li>在这种情况下，现有的接口需要转化为客户类期望的接口，这样保证了对现有类的重用。如果不进行这样的转化，客户类就不能利用现有类所提供的功 能，适配器模式可以完成这样的转化。</li> <li>在适配器模式中可以定义一个包装类，包装不兼容接口的对象，这个包装类指的就是适配器(Adapter)，它所包装的对象就是适配者(Adaptee)，即被适配的类。</li> <li>适配器提供客户类需要的接口，**适配器的实现就是把客户类的请求转化为对适配者的相应接口的调用。**也就是说：当客户类调用适配器的方法时，在适配器类的内部将调用适配者类的方法，而这个过程对客户类是透明的，客户类并不直接访问适配者类。因此，适配器可以使由于接口不兼容而不能交互的类可以一起工作。这就是适配器模式的模式动机。</li></ul></blockquote> <h2 id="定义"><a href="#定义" class="header-anchor">#</a> 定义</h2> <p>适配器模式(Adapter Pattern) ：将<strong>一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器</strong>(Wrapper)。</p> <p>适配器模式既可以作为类结构型模式，也可以作为对象结构型模式。</p> <p>Adapter（适配器）: 包装不兼容接口的对象，这个包装类指的就是适配器</p> <p>Adaptee（适配者）: 需要包装的对象就是适配者，被适配的类</p> <h2 id="结构"><a href="#结构" class="header-anchor">#</a> 结构</h2> <p>Target: 目标抽象类</p> <p>Adapter：适配器类</p> <p>Adaptee：适配者类</p> <p>Client：客户类</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/design-patterns/3-architectural-patterns/" class="prev router-link-active">
+        结构性模式
+      </a></span> <span class="next"><a href="/design-patterns/3-architectural-patterns/2.bridge.html">
+        桥接模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/design-patterns/assets/js/app.3c2122e4.js" defer></script><script src="/design-patterns/assets/js/2.5c19d7f6.js" defer></script><script src="/design-patterns/assets/js/13.9297cc82.js" defer></script>
+  </body>
+</html>
